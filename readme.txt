@@ -44,7 +44,7 @@ We now offer an installation service to assist you in this process. We will inst
 On each page, there is a "?" next to the page title. Clicking on it will bring up a small help window that will assist you on that page.
 
 = I'm still having trouble. What do I do? =
-If you still have any trouble, feel free to use the widget on the quiz dashboard within the plugin to contact me and I will help you.
+If you still have any trouble, feel free to use the widget on the help within the plugin to contact me and I will help you.
 
 = I have an idea, how do I contact you? =
 Feel free to use the widget on the quiz dashboard within the plugin or from the contact page at mylocalwebstop.com.
