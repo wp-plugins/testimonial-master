@@ -3,7 +3,7 @@
 /*
 Plugin Name: Testimonial Master
 Description: Use this plugin to enter and display testimonials
-Version: 0.1.1
+Version: 0.1.2
 Author: Frank Corso
 Author URI: http://www.mylocalwebstop.com/
 Plugin URI: http://www.mylocalwebstop.com/

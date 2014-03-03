@@ -3,7 +3,7 @@ Contributors: fpcorso
 Tags: testimonies, testimonial, 
 Requires at least: 3.3
 Tested up to: 3.8.1
-Stable tag: 0.1.1
+Stable tag: 0.1.2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Use this plugin to enter and display testimonials.
@@ -18,6 +18,8 @@ Showing testimonials on your website helps you to attract and keep new clients/c
 * Shortcode to show all testimonials
 * Shortcode to show a random testimonial
 * Included widget shows a random testimonial
+
+Be sure to check out all of our plugins in our Master Suite. Visit our plugins page for details: (http://mylocalwebstop.com/wordpress-plugins/)
 
 
 == Installation ==
@@ -44,10 +46,16 @@ We now offer an installation service to assist you in this process. We will inst
 On each page, there is a "?" next to the page title. Clicking on it will bring up a small help window that will assist you on that page.
 
 = I'm still having trouble. What do I do? =
-If you still have any trouble, feel free to use the widget on the help within the plugin to contact me and I will help you.
+If you still have any trouble, feel free to use the widget on the help page within the plugin to contact me and I will help you.
+
+= I need a lot of help setting up my testimonials, what can you do to help? =
+We now offer a monthly premium support plan that offers priority response, access to a premium support-only forum, and includes 1-on-1 training! For details, visit our services page: (http://mylocalwebstop.com/services/)
+
+= Do you offer any 1-on-1 training to assist me in using this plugin? =
+We now offer an installation service that includes 1-on-1 training as well as a monthly support plan that includes 1-on-1 training. For details, visit our services page: (http://mylocalwebstop.com/services/)
 
 = I have an idea, how do I contact you? =
-Feel free to use the widget on the quiz dashboard within the plugin or from the contact page at mylocalwebstop.com.
+Feel free to use the widget on the widget on the help page within the plugin or from the contact page at mylocalwebstop.com.
 
 == Screenshots ==
 
@@ -57,10 +65,13 @@ Feel free to use the widget on the quiz dashboard within the plugin or from the 
 
 == Changelog ==
 
+= 0.1.2 (March 2, 2014) =
+ * Minor Bug Fixes
+
 = 0.1.1 (February 25, 2014) =
-* Initial Version
+ * Initial Version
 
 == Upgrade Notice ==
 
-= 0.1.1 =
-Initial Version
+= 0.1.2 =
+This update fixes several minor bugs

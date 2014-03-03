@@ -88,7 +88,7 @@ function mlw_tm_generate_help_page()
 	<h2>Testimonial Master Help And Support</h2>
 	
 	<h3>Version <?php echo $mlw_tm_version; ?></h3>
-	<p>Thank you for trying out this plugin. I hope you find it beneficial to your website. If it is, please consider donating Or, please consider rating this plugin <a href="http://wordpress.org/support/view/plugin-reviews/quote-master">here</a>.</p>
+	<p>Thank you for trying out this plugin. I hope you find it beneficial to your website. If it is, please consider donating Or, please consider rating this plugin <a href="http://wordpress.org/support/view/plugin-reviews/testimonial-master">here</a>.</p>
 	
 	<div style="float:left; width:60%;" class="inner-sidebar1">
 		<?php do_meta_boxes('mlw_tm_wpss3','advanced','');  ?>	
@@ -118,10 +118,10 @@ function mlw_tm_wpss_mrt_meta_box2()
 	<div>
 	<table width='100%'>
 	<tr>
-	<td align='left'>0.1.1 (February 25, 2014)</td>
+	<td align='left'>0.1.2 (March 2, 2014)</td>
 	</tr>
 	<tr>
-		<td align='left'>* Initial Version</td>
+		<td align='left'>* Minor Bug Fixes</td>
 	</tr>
 	</table>
 	</div>
