@@ -19,7 +19,7 @@ function mlw_tm_all_shortcode($atts)
 	
 	
 	
-	echo $mlw_tm_display;
+	return $mlw_tm_display;
 }
 
 function mlw_tm_random_shortcode($atts)
@@ -42,6 +42,6 @@ function mlw_tm_random_shortcode($atts)
 	
 	
 	
-	echo $mlw_tm_display;
+	return $mlw_tm_display;
 }
 ?>
