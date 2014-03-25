@@ -41,8 +41,8 @@ function mlw_tm_generate_help_page()
 	</script>
 	";
 	$mlw_tm_version = get_option('mlw_tm_version');
-	add_meta_box("wpss_mrts", 'In This Update', "mlw_tm_wpss_mrt_meta_box2", "mlw_tm_wpss2"); 
 	add_meta_box("wpss_mrts", 'Support', "mlw_tm_wpss_mrt_meta_box3", "mlw_tm_wpss3");
+	add_meta_box("wpss_mrts", 'My Local Webstop Services', "mlw_tm_dashboard_services", "mlw_tm_wpss6");
 	add_meta_box("wpss_mrts", 'Contribution', "mlw_tm_wpss_mrt_meta_box4", "mlw_tm_wpss4");
 	add_meta_box("wpss_mrts", 'News From My Local Webstop', "mlw_tm_wpss_mrt_meta_box5", "mlw_tm_wpss5");
 	?>
@@ -88,42 +88,78 @@ function mlw_tm_generate_help_page()
 	<h2>Testimonial Master Help And Support</h2>
 	
 	<h3>Version <?php echo $mlw_tm_version; ?></h3>
-	<p>Thank you for trying out this plugin. I hope you find it beneficial to your website. If it is, please consider donating Or, please consider rating this plugin <a href="http://wordpress.org/support/view/plugin-reviews/testimonial-master">here</a>.</p>
+	<?php
+	if ( get_option('mlw_advert_shows') == 'true' )
+	{
+	?>
+		<style>
+			div.help_decide
+			{
+				display: block;
+				text-align:center;
+				letter-spacing: 1px;
+				margin: auto;
+				text-shadow: 0 1px 1px #000000;
+				background: #0d97d8;
+				border: 5px solid #106daa;
+				-moz-border-radius: 20px;
+				-webkit-border-radius: 20px;
+				-khtml-border-radius: 20px;
+				border-radius: 20px;
+				color: #FFFFFF;
+			}
+			div.help_decide a
+			{
+				color: yellow;
+			}		
+		</style>
+		<div class="help_decide">
+			<p>Need support or features? Check out our Plugin Add-On Store for premium support, installation services, and more! Visit our <a href="http://mylocalwebstop.com/shop/">Plugin Add-On Store</a>!</p>
+		</div>
+	<?php
+	}
+	?>
 	
-	<div style="float:left; width:60%;" class="inner-sidebar1">
+	<div style="float:left; width:33%;" class="inner-sidebar1">
 		<?php do_meta_boxes('mlw_tm_wpss3','advanced','');  ?>	
 	</div>
 	
-	<div style="float:right; width:36%; " class="inner-sidebar1">
-		<?php do_meta_boxes('mlw_tm_wpss2','advanced',''); ?>	
+	<div style="float:right; width:33%; " class="inner-sidebar1">
+		<?php do_meta_boxes('mlw_tm_wpss5','advanced',''); ?>	
 	</div>
 	
-	<div style="float:right; width:36%; " class="inner-sidebar1">
-		<?php do_meta_boxes('mlw_tm_wpss5','advanced',''); ?>	
+	<div style="float:right; width:33%; " class="inner-sidebar1">
+		<?php if ( get_option('mlw_advert_shows') == 'true' ) {do_meta_boxes('mlw_tm_wpss6','advanced','');} ?>	
 	</div>
 			
 	<!--<div style="clear:both"></div>-->
 						
 	<div style="float:left; width:60%; " class="inner-sidebar1">
-		<?php do_meta_boxes('mlw_tm_wpss4','advanced',''); ?>	
+		<?php if ( get_option('mlw_advert_shows') == 'true' ) {do_meta_boxes('mlw_tm_wpss4','advanced','');} ?>	
 	</div>
 
 	</div>
 	<?php
 }
 
-function mlw_tm_wpss_mrt_meta_box2()
+function mlw_tm_dashboard_services()
 {
 	?>
 	<div>
-	<table width='100%'>
-	<tr>
-	<td align='left'>0.1.2 (March 2, 2014)</td>
-	</tr>
-	<tr>
-		<td align='left'>* Minor Bug Fixes</td>
-	</tr>
-	</table>
+		<h2>Plugin Premium Support</h2>
+		<p>Plugin Premium Support includes 1 year of priority support, priority feature requests, and access to WordPress training videos.</p>
+		<p>You can also purchase 1-on-1 training to go with your support!</p>
+		<p>For details, visit our <a href="http://mylocalwebstop.com/product/plugin-premium-support/" target="_blank" style="color:blue;">Plugin Premium Support</a> page.</p>
+		<hr /> 
+		<h2>Plugin Installation Services</h2>
+		<p>We will install and configure any or all of our WordPress plugins on your existing WordPress site.</p>
+		<p>We also offer 1-on-1 training to go with your installation!</p>
+		<p>For details, visit our <a href="http://mylocalwebstop.com/product/plugin-installation/" target="_blank" style="color:blue;">Plugin Installation</a> page.</p>
+		<hr />
+		<h2>WordPress Maintenance Services</h2>
+		<p>Our maintenance service includes around the clock security monitoring, off-site backups, plugin updates, theme updates, WordPress updates, WordPress training videos, and a Monthly Status Report.</p>
+		<p>Up to 30 minutes of support, consultation, and training included each month.</p>
+		<p>Visit our <a href="http://mylocalwebstop.com/wordpress-maintenance-services/" target="_blank" style="color:blue;">WordPress Maintenance Services</a> page for details.</p>
 	</div>
 	<?php
 }

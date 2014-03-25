@@ -155,6 +155,7 @@ function mlw_tm_generate_admin_page()
 			$j("#edit_testimonial_dialog").dialog({
 				autoOpen: false,
 				show: 'blind',
+				width:700,
 				hide: 'explode',
 				buttons: {
 				Cancel: function() {
@@ -214,6 +215,37 @@ function mlw_tm_generate_admin_page()
 		}
 		?>
 		<p>Add testimonials to your website using the built in widget. Or, put [mlw_tm_all] into a post or page to list all your testimonials. Or, put [mlw_tm_random] into a post or page to show a random testimonial!</p>
+		<?php
+		if ( get_option('mlw_advert_shows') == 'true' )
+		{
+		?>
+			<style>
+				div.help_decide
+				{
+					display: block;
+					text-align:center;
+					letter-spacing: 1px;
+					margin: auto;
+					text-shadow: 0 1px 1px #000000;
+					background: #0d97d8;
+					border: 5px solid #106daa;
+					-moz-border-radius: 20px;
+					-webkit-border-radius: 20px;
+					-khtml-border-radius: 20px;
+					border-radius: 20px;
+					color: #FFFFFF;
+				}
+				div.help_decide a
+				{
+					color: yellow;
+				}		
+			</style>
+			<div class="help_decide">
+				<p>Need support or features? Check out our Plugin Add-On Store for premium support, installation services, and more! Visit our <a href="http://mylocalwebstop.com/shop/">Plugin Add-On Store</a>!</p>
+			</div>
+		<?php
+		}
+		?>
 		<button id="new_testimonial_button_two">Add Testimonial</button>
 		<br />
 		<?php 
