@@ -1,9 +1,9 @@
 === Testimonial Master ===
 Contributors: fpcorso
 Tags: testimonies, testimonial, 
-Requires at least: 3.3
-Tested up to: 3.8.1
-Stable tag: 0.1.4
+Requires at least: 3.5.1
+Tested up to: 3.9.1
+Stable tag: 0.1.5
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Use this plugin to enter and display testimonials.
@@ -49,7 +49,7 @@ On each page, there is a "?" next to the page title. Clicking on it will bring u
 If you still have any trouble, feel free to use the widget on the help page within the plugin to contact me and I will help you.
 
 = I need a lot of help setting up my testimonials, what can you do to help? =
-We now offer a monthly premium support plan that offers priority response, access to a premium support-only forum, and includes 1-on-1 training! For details, visit our premium support page: [My Local Webstop Services](http://mylocalwebstop.com/product/plugin-premium-support/)
+We now offer a premium support plan that offers priority response, priority feature requests, and includes 1-on-1 training! For details, visit our premium support page: [My Local Webstop Services](http://mylocalwebstop.com/product/plugin-premium-support/)
 
 = Do you offer any 1-on-1 training to assist me in using this plugin? =
 We now offer an installation service that includes 1-on-1 training as well as a monthly support plan that includes 1-on-1 training. For details, visit our services page: [My Local Webstop Services](http://mylocalwebstop.com/services/)
@@ -64,6 +64,9 @@ Feel free to use the widget on the widget on the help page within the plugin or 
 3. Testimonial Master Widget
 
 == Changelog ==
+
+= 0.2.1 (May 20, 2014) =
+ * Minor Design Changes
 
 = 0.1.4 (March 25, 2014) =
  * Minor Bug Fixes

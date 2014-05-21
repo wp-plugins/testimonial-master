@@ -56,7 +56,11 @@ class Mlw_Tm_Random_Widget extends WP_Widget {
 		$mlw_tm_widget_display = "";
 		$mlw_tm_widget_display .= '"'.stripslashes(htmlspecialchars_decode($mlw_tm_all_data->testimonial, ENT_QUOTES)).'"';
 		$mlw_tm_widget_display .= "<br />";
-		$mlw_tm_widget_display .= "-".htmlspecialchars_decode($mlw_tm_all_data->name, ENT_QUOTES).", <a style='color: blue;' href='".$mlw_tm_all_data->url."'>".$mlw_tm_all_data->url."</a>";
+		$mlw_tm_widget_display .= "~ ".htmlspecialchars_decode($mlw_tm_all_data->name, ENT_QUOTES)."";
+		if ( $mlw_tm_all_data->url != "" )
+		{
+			$mlw_tm_widget_display .= ", <a style='color: blue;' href='".$mlw_tm_all_data->url."'>".$mlw_tm_all_data->url."</a>";
+		}
 		
 		echo $mlw_tm_widget_display;
    		echo '</div>';
