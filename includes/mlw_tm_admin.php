@@ -15,9 +15,9 @@ function mlw_tm_generate_admin_page()
 	//Add new testimonial
 	if ( isset($_POST["add_testimonial"]) && $_POST["add_testimonial"] == "confirmation")
 	{
-		if ( isset($_POST["testimonial"] ) ) { $mlw_tm_testimonial = trim(preg_replace('/\s+/',' ', nl2br(htmlspecialchars($_POST["testimonial"], ENT_QUOTES)))); }
-		if ( isset($_POST["name"] ) ) { $mlw_tm_name = htmlspecialchars($_POST["name"], ENT_QUOTES); }
-		if ( isset($_POST["url"] ) ) { $mlw_tm_url = htmlspecialchars($_POST["url"], ENT_QUOTES); }
+		if ( isset($_POST["testimonial"] ) ) { $mlw_tm_testimonial = stripslashes(trim(preg_replace('/\s+/',' ', nl2br(htmlspecialchars($_POST["testimonial"], ENT_QUOTES))))); }
+		if ( isset($_POST["name"] ) ) { $mlw_tm_name = stripslashes(htmlspecialchars($_POST["name"], ENT_QUOTES)); }
+		if ( isset($_POST["url"] ) ) { $mlw_tm_url = stripslashes(htmlspecialchars($_POST["url"], ENT_QUOTES)); }
 		$mlw_tm_results = $wpdb->query( $wpdb->prepare( "INSERT INTO ".$wpdb->prefix."mlw_tm_testimonials (name, url, testimonial, deleted) VALUES (%s, %s, %s, 0)", $mlw_tm_name, $mlw_tm_url, $mlw_tm_testimonial ) );
 		if ($mlw_tm_results != false)
 		{
@@ -50,9 +50,9 @@ function mlw_tm_generate_admin_page()
 	if ( isset($_POST["edit_testimonial_edit"]) && $_POST["edit_testimonial_edit"] == "confirmation")
 	{
 		if ( isset($_POST["edit_testimonial_id"] ) ) { $mlw_tm_testimonial_id = $_POST["edit_testimonial_id"]; }
-		if ( isset($_POST["edit_testimonial"] ) ) { $mlw_tm_testimonial = htmlspecialchars($_POST["edit_testimonial"], ENT_QUOTES); }
-		if ( isset($_POST["edit_name"] ) ) { $mlw_tm_name = htmlspecialchars($_POST["edit_name"], ENT_QUOTES); }
-		if ( isset($_POST["edit_url"] ) ) { $mlw_tm_url = htmlspecialchars($_POST["edit_url"], ENT_QUOTES); }
+		if ( isset($_POST["edit_testimonial"] ) ) { $mlw_tm_testimonial = stripslashes(htmlspecialchars($_POST["edit_testimonial"], ENT_QUOTES)); }
+		if ( isset($_POST["edit_name"] ) ) { $mlw_tm_name = stripslashes(htmlspecialchars($_POST["edit_name"], ENT_QUOTES)); }
+		if ( isset($_POST["edit_url"] ) ) { $mlw_tm_url = stripslashes(htmlspecialchars($_POST["edit_url"], ENT_QUOTES)); }
 		$mlw_tm_results = $wpdb->query( $wpdb->prepare( "UPDATE ".$wpdb->prefix."mlw_tm_testimonials SET testimonial='%s', url='%s', name='%s' WHERE testimonial_id=%d", $mlw_tm_testimonial, $mlw_tm_url, $mlw_tm_name, $mlw_tm_testimonial_id ) );
 		if ($mlw_tm_results != false)
 		{
@@ -226,9 +226,9 @@ function mlw_tm_generate_admin_page()
 			if($alternate) $alternate = "";
 			else $alternate = " class=\"alternate\"";
 			$testimonial_list .= "<tr{$alternate}>";
-			$testimonial_list .= "<td><span style='font-size:16px;'>" . $mlw_tm_data->name . "</span><div><span style='color:green;font-size:12px;'><a href='#' onclick=\"editTestimonial(".$mlw_tm_data->testimonial_id.",'".$mlw_tm_data->name."','".$mlw_tm_data->url."','".str_replace("'", "\'", stripslashes(htmlspecialchars_decode($mlw_tm_data->testimonial, ENT_QUOTES)))."');\">Edit</a>|<a href='#' onclick=\"deleteTestimonial(".$mlw_tm_data->testimonial_id.");\">Delete</a></span></div></td>";
+			$testimonial_list .= "<td><span style='font-size:16px;'>" . $mlw_tm_data->name . "</span><div><span style='color:green;font-size:12px;'><a href='#' onclick=\"editTestimonial(".$mlw_tm_data->testimonial_id.",'".esc_js($mlw_tm_data->name)."','".esc_js($mlw_tm_data->url)."','".esc_js(htmlspecialchars_decode($mlw_tm_data->testimonial, ENT_QUOTES))."');\">Edit</a>|<a href='#' onclick=\"deleteTestimonial(".$mlw_tm_data->testimonial_id.");\">Delete</a></span></div></td>";
 			$testimonial_list .= "<td class='post-title column-title'><span style='font-size:16px;'>" . $mlw_tm_data->url ." </span></td>";
-			$testimonial_list .= "<td><span style='font-size:16px;'>".stripslashes(htmlspecialchars_decode($mlw_tm_data->testimonial, ENT_QUOTES))."</span></td>";
+			$testimonial_list .= "<td><span style='font-size:16px;'>".htmlspecialchars_decode($mlw_tm_data->testimonial, ENT_QUOTES)."</span></td>";
 			$testimonial_list .= "</tr>";
 		}
 		
@@ -253,15 +253,15 @@ function mlw_tm_generate_admin_page()
 				<input type='hidden' name='add_testimonial' value='confirmation' />
 				<table class="wide" style="text-align: left; white-space: nowrap;">
 					<tr>
-						<td><span style='font-weight:bold;'>Testimonial<a href='#' title='Enter the testimonial here...'>?</a>:</span></td>
+						<td><span style='font-weight:bold;'>Testimonial:</span></td>
 						<td><textarea name="testimonial" id="testimonial" style="border-color:#000000;color:#3300CC;width: 500px; height: 150px;"></textarea></td>
 					</tr>
 					<tr>
-						<td><span style='font-weight:bold;'>From Who<a href='#' title='Enter in the person/company that said this testimonial'>?</a>:</span></td>
+						<td><span style='font-weight:bold;'>From Who:</span></td>
 						<td><input type="text" name="name" name="name" style="border-color:#000000;color:#3300CC;width: 500px;"/></td>
 					</tr>
 					<tr>
-						<td><span style='font-weight:bold;'>From URL<a href='#' title='Enter in the url where that person/company can be found'>?</a>:</span></td>
+						<td><span style='font-weight:bold;'>From URL:</span></td>
 						<td><input type="text" name="url" name="url" style="border-color:#000000;color:#3300CC;width: 500px;"/></td>
 					</tr>
 				</table>

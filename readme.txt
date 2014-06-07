@@ -1,9 +1,9 @@
 === Testimonial Master ===
 Contributors: fpcorso
 Tags: testimonies, testimonial, 
-Requires at least: 3.5.1
+Requires at least: 3.7.1
 Tested up to: 3.9.1
-Stable tag: 0.1.5
+Stable tag: 0.1.6
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Use this plugin to enter and display testimonials.
@@ -65,7 +65,11 @@ Feel free to use the widget on the widget on the help page within the plugin or 
 
 == Changelog ==
 
-= 0.2.1 (May 20, 2014) =
+= 0.1.6 (June 7, 2014) =
+ * Fixed Edit Button Not Working Bug
+ * Fixed URL Not Showing Bug
+
+= 0.1.5 (May 20, 2014) =
  * Minor Design Changes
 
 = 0.1.4 (March 25, 2014) =
@@ -81,6 +85,9 @@ Feel free to use the widget on the widget on the help page within the plugin or 
  * Initial Version
 
 == Upgrade Notice ==
+
+= 0.1.6 =
+This update fixes several bugs
 
 = 0.1.3 =
 This update fixes several minor bugs

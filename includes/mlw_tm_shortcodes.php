@@ -16,7 +16,7 @@ function mlw_tm_all_shortcode($atts)
 		$mlw_tm_display .= "~ ".htmlspecialchars_decode($mlw_tm_data->name, ENT_QUOTES)."";
 		if ( $mlw_tm_data->url != "" )
 		{
-			$mlw_tm_widget_display .= ", <a style='color: blue;' href='".$mlw_tm_data->url."'>".$mlw_tm_data->url."</a>";
+			$mlw_tm_display .= ", <a style='color: blue;' href='".$mlw_tm_data->url."'>".$mlw_tm_data->url."</a>";
 		}
 		$mlw_tm_display .= "<br /><br /><hr /><br />";
 	}
@@ -43,7 +43,7 @@ function mlw_tm_random_shortcode($atts)
 		$mlw_tm_display .= "~ ".htmlspecialchars_decode($mlw_tm_data->name, ENT_QUOTES)."";
 		if ( $mlw_tm_data->url != "" )
 		{
-			$mlw_tm_widget_display .= ", <a style='color: blue;' href='".$mlw_tm_data->url."'>".$mlw_tm_data->url."</a>";
+			$mlw_tm_display .= ", <a style='color: blue;' href='".$mlw_tm_data->url."'>".$mlw_tm_data->url."</a>";
 		}
 		$mlw_tm_display .= "<br /><br /><hr /><br />";
 	}
