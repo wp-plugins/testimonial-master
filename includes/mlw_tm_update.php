@@ -6,7 +6,7 @@ function mlw_tm_update()
 {
 	
 	//Update this variable each update. This is what is checked when the plugin is deciding to run the upgrade script or not.
-	$data = "0.1.6";
+	$data = "0.1.7";
 	if ( ! get_option('mlw_tm_version'))
 	{
 		add_option('mlw_tm_version' , $data);
