@@ -9,7 +9,7 @@ function mlw_tm_all_shortcode($atts)
 	$mlw_tm_display = "";
 	
 	
-	$mlw_tm_all_data = $wpdb->get_results( "SELECT * FROM ".$wpdb->prefix."mlw_tm_testimonials WHERE deleted=0" );
+	$mlw_tm_all_data = $wpdb->get_results( "SELECT * FROM ".$wpdb->prefix."mlw_tm_testimonials WHERE deleted=0 ORDER BY testimonial_id DESC" );
 	foreach($mlw_tm_all_data as $mlw_tm_data) {
 		$mlw_tm_display .= '"'.stripslashes(htmlspecialchars_decode($mlw_tm_data->testimonial, ENT_QUOTES)).'"';
 		$mlw_tm_display .= "<br />";

@@ -68,7 +68,7 @@ function mlw_tm_generate_admin_page()
 	
 	//Retrieve list of testimonials
 	global $wpdb;
-	$mlw_tm_all_data = $wpdb->get_results( "SELECT * FROM ".$wpdb->prefix."mlw_tm_testimonials WHERE deleted=0" );
+	$mlw_tm_all_data = $wpdb->get_results( "SELECT * FROM ".$wpdb->prefix."mlw_tm_testimonials WHERE deleted=0 ORDER BY testimonial_id DESC" );
 	?>
 	<!-- css -->
 	<link type="text/css" href="<?php echo plugin_dir_url( __FILE__ ); ?>css/redmond/jquery-ui-1.10.4.custom.css" rel="stylesheet" />

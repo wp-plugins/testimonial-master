@@ -3,7 +3,7 @@ Contributors: fpcorso
 Tags: testimonies, testimonial, 
 Requires at least: 3.7.1
 Tested up to: 3.9.1
-Stable tag: 0.1.7
+Stable tag: 0.1.8
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Use this plugin to enter and display testimonials.
@@ -65,7 +65,11 @@ Feel free to use the widget on the widget on the help page within the plugin or 
 
 == Changelog ==
 
-= 0.1.7 (June 7, 2014) =
+= 0.1.8 (June 21, 2014) =
+ * Change Defualt Order To Show Newest First
+ * Minor Bug Fixes
+
+= 0.1.6 (June 7, 2014) =
  * Fixed Edit Button Not Working Bug
  * Fixed URL Not Showing Bug
 
